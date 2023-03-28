@@ -1,0 +1,33 @@
+﻿<Window x:Class="InventoryMaintenance.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryMaintenance"
+        mc:Ignorable="d"
+        MinHeight="450" MinWidth="900"
+        Title="Inventory Maintenance" Height="450" Width="900">
+    <!--ResizeMode="NoResize"-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Drop Here" Margin="15,5,0,0" BorderBrush="Blue" BorderThickness="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AllowDrop="True" Drop="Dropbox_Drop" PreviewDragOver="Dropbox_PreviewDragOver" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250"/>
+        <TextBox x:Name="Errors" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="15,0,14.6,15" Text="" BorderBrush="Black" BorderThickness="1" Height="123" VerticalAlignment="Bottom" Padding="5"/>
+        <Label Content="v1.44" Margin="0,5,9.6,377" HorizontalAlignment="Right" Width="43"/>
+        <DataGrid x:Name="MyDataGrid" HorizontalScrollBarVisibility="Visible" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" Margin="15,73,14.6,154"/>
+        <Button x:Name="WriteButton" IsEnabled="False"  Click="Write_Button_Click"  Content="Write" HorizontalAlignment="Right" Margin="0,9,98.6,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="EBT:" HorizontalAlignment="Left" Margin="291,-1,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Hi5:" HorizontalAlignment="Left" Margin="291,26,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="EBTBox" Content="✗" HorizontalAlignment="Left" Margin="328,-1,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Hi5Box" Content="✗" HorizontalAlignment="Left" Margin="327,26,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Errors:" HorizontalAlignment="Left" Margin="391,-1,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Warnings:" HorizontalAlignment="Left" Margin="391,26,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="ErrorBox" Content="✗" HorizontalAlignment="Left" Margin="447,-1,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="WarningBox" Content="✗" HorizontalAlignment="Left" Margin="475,26,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Deli Labels:" HorizontalAlignment="Left" Margin="531,1,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="DeliBox" Content="✗" HorizontalAlignment="Left" Margin="629,2,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="H&amp;S EDLP:" HorizontalAlignment="Left" Margin="531,26,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="HSBox" Content="✗" HorizontalAlignment="Left" Margin="629,26,0,0" VerticalAlignment="Top" FontSize="18"/>
+    </Grid>
+</Window>
